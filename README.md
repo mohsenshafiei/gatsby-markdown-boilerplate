@@ -8,9 +8,8 @@
   Gatsby-Markdown-Boilerplate
 </h1>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
 ## 🚀 Quick start
+
 1.  **Start developing.**
 ```bash
 gatsby develop
@@ -23,8 +22,6 @@ or
 ```bash
 npm start
 ```
-
-1.  **Open the source code and start editing!**
 
 ## 🧐 What's inside?
 
