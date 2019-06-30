@@ -42,7 +42,6 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.fields.slug,
         component: postTemplate,
         context: {
-          // Passing slug for template to use to get post
           slug: node.fields.slug,
         },
       })

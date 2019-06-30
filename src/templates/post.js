@@ -6,6 +6,7 @@ import style from './style.module.scss';
 const Post = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const content = data.markdownRemark.excerpt
+  console.log(content);
   return (
     <Layout>
       <h2 className={style.title}>{post.title}</h2>
@@ -26,7 +27,7 @@ export const postQuery = graphql`
         author
         date
       }
-      excerpt
+      excerpt(pruneLength: 1000, format: PLAIN, truncate: true)
     }
   }
 `
