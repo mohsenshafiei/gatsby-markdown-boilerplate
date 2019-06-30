@@ -1,14 +1,17 @@
 import React from 'react'
 import Layout from '../layout'
 import { graphql } from 'gatsby'
-// import { slugify } from '../util/utilityFunctions' 
+import style from './style.module.scss';
 
-const SinglePost = ({ data, pageContext, location }) => {
+const Post = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
+  const content = data.markdownRemark.excerpt
   return (
     <Layout>
-      <span className="text-info">{post.date}</span> by{' '}
-      <span className="text-info">{post.author}</span>
+      <h2 className={style.title}>{post.title}</h2>
+      By {' '} <span className={style.info}>{post.author}</span>
+      {' | '}<span className={style.info}>{post.date }</span>
+      <p className={style.content}>{content}</p>
     </Layout>
   );
 }
@@ -23,8 +26,9 @@ export const postQuery = graphql`
         author
         date
       }
+      excerpt
     }
   }
 `
 
-export default SinglePost
+export default Post
