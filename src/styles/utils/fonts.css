@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Grotters;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("Grotters.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("Grotters.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("Grotters.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Cocogoose;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("Cocogoose.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("Cocogoose.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("Cocogoose.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("Lora-Regular.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("Lora-Regular.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("Lora-Regular.ttf")
+      format("truetype");
+}

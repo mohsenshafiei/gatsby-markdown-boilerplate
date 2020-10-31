@@ -1,7 +1,23 @@
-.container {
-  width: 100%;
-  height: 64px;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  text-align: left;
   padding: 1em;
+  z-index: 10;
+  font-family: Cocogoose;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 2px -3px #999;
+  -moz-box-shadow: 0 4px 2px -3px #999;
+  box-shadow: 0 4px 2px -3px #999;
+  :hover {
+    color: #8b008b;
+  }
+  // @media (max-width: 675px) {
+  //   display: none;
+  // }
 }
 
 .wlink {
@@ -9,9 +25,10 @@
 }
 
 .link {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9em;
+  font-family: Cocogoose;
   margin-left: 0.5em;
   margin-right: 0.5em;
-  font-size: 1em;
-  color: black;
-  text-decoration: none;
 }

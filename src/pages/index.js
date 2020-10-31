@@ -1,54 +1,43 @@
 import React from "react"
+import style from "./style.module.scss"
 import Layout from "../layout"
-import { graphql, StaticQuery } from "gatsby"
-import Post from '../components/post';
+import { Maze } from "../components/maze"
+import profile from "../static/images/profile.png"
+import cv from "../static/cv/cv.pdf"
+
 const App = () => (
   <Layout>
-    <StaticQuery query={indexQuery} render={data => {
-      return (
-        <div>
-          {
-            data.allMarkdownRemark.edges.map( ({ node}) => {
-              return (
-                <Post
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  date={node.frontmatter.date}
-                  slug={node.fields.slug}
-                  body={node.excerpt}
-                  key={node.id}
-                />
-              );
-            })
-        }
+    <div className={style.container}>
+      <Maze />
+      <div className={style.wrapper}>
+        <div className={style.circleWarpper}>
+          <div className={style.circle} />
+          <img className={style.avatar} src={profile} alt="avatar" />
         </div>
-      )
-    }}></StaticQuery>
+        <h1 className={style.title}>MOHSEN SHAFIEI</h1>
+        <h1 className={style.role}>Frontend Engineer</h1>
+        <div className={style.wlink}>
+          <a className={style.link} href={cv} target="_blank">
+            CV
+          </a>
+          <a
+            className={style.link}
+            href="https://github.com/mohsenshafiei"
+            target="blank"
+          >
+            Github
+          </a>
+          <a
+            className={style.link}
+            href="https://www.linkedin.com/in/mohsen-shafiei-tafreshi-7250847b/"
+            target="blank"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
-
-const indexQuery = graphql`
-  query indexQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {fileAbsolutePath: {regex: "/posts/.*.md$/"}}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-            author
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
 
 export default App

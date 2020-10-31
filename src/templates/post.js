@@ -1,20 +1,23 @@
-import React from 'react'
-import Layout from '../layout'
-import { graphql } from 'gatsby'
-import style from './style.module.scss';
+import React from "react"
+import Layout from "../layout"
+import { graphql } from "gatsby"
+import style from "./style.module.scss"
+import parse from "html-react-parser"
 
 const Post = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const content = data.markdownRemark.excerpt
-  console.log(content);
   return (
     <Layout>
-      <h2 className={style.title}>{post.title}</h2>
-      By {' '} <span className={style.info}>{post.author}</span>
-      {' | '}<span className={style.info}>{post.date }</span>
-      <p className={style.content}>{content}</p>
+      <div className={style.container}>
+        <h2 className={style.title}>{post.title}</h2>
+        <span className={style.by}>By</span>{" "}
+        <span className={style.info}>{post.author}</span>
+        <span className={style.date}>Published On {post.date}</span>
+        <p className={style.content}>{parse(content)}</p>
+      </div>
     </Layout>
-  );
+  )
 }
 
 export const postQuery = graphql`
@@ -27,7 +30,7 @@ export const postQuery = graphql`
         author
         date
       }
-      excerpt(pruneLength: 1000, format: PLAIN, truncate: true)
+      excerpt(pruneLength: 20000, format: HTML, truncate: true)
     }
   }
 `

@@ -1,4 +1,10 @@
 .container {
-  margin: 0 auto;
-  width: 90%;
+  background-color: #282c35;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

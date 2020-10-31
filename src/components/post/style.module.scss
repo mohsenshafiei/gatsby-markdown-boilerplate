@@ -1,19 +1,84 @@
+.container {
+  padding: 2em 1em;
+  border-radius: 5px;
+  background-color: #282c35;
+  max-width: calc(100vw - 60%);
+  margin: 2em auto;
+  color: white;
+  @media (max-width: 1100px) {
+    max-width: calc(100vw - 20%);
+  }
+  @media (max-width: 760px) {
+    max-width: calc(100vw - 10%);
+  }
+  @media (max-width: 450px) {
+    max-width: calc(100vw);
+  }
+}
 .title {
   text-decoration: none;
-  color: black;
-  font-size: 1.5em;
-  margin: 2em 0 0.5em 0;
+  color: pink;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0em 0 0.5em 0;
+  text-align: left;
+  text-decoration: underline;
+  :hover {
+    color: pink;
+    text-decoration: underline;
+  }
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
 }
 
 .link {
   text-decoration: none;
-  color: black;
+  color: pink;
+  font-family: Grotters;
+  text-align: left;
 }
 
 .info {
   margin-bottom: 1em;
+  font-size: 0.8em;
+  color: white;
+  text-align: left;
+  font-family: Lora;
+  font-weight: 800;
 }
 
 .content {
-  color: #aaaaaa;
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-family: Lora;
+  @media (max-width: 450px) {
+    font-size: 0.8em;
+  }
+}
+.by {
+  font-family: Cocogoose;
+  color: pink;
+  margin-right: 0.3em;
+}
+.author {
+  font-family: Cocogoose;
+}
+.date {
+  border: 1px solid white;
+  padding: 0.2em 1em;
+  font-size: 0.8em;
+  border-radius: 25px;
+  display: block;
+  @media (max-width: 450px) {
+    max-width: 175px;
+    margin-top: 0.3em;
+    border: none;
+    margin-left: 1.2em;
+    // float: right;
+  }
+  @media (min-width: 450px) {
+    float: right;
+  }
 }

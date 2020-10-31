@@ -1,6 +1,22 @@
-@import './reset.scss';
+@import "./utils/variables.module";
+@import "./utils/reset.module";
+// @import "./utils/fonts.module";
 
-@import './modules/background.module.scss';
-@import './modules/color.module.scss';
-@import './modules/dimension.module.scss';
-@import './modules/padding.module.scss';
+// Modules
+@import "./modules/alignment.module";
+@import "./modules/border.module";
+@import "./modules/box-shadow.module";
+@import "./modules/color.module";
+@import "./modules/decoration.module";
+@import "./modules/dimension.module";
+@import "./modules/direction.module";
+@import "./modules/display.module";
+@import "./modules/font.module";
+@import "./modules/margin.module";
+@import "./modules/overflow.module";
+@import "./modules/padding.module";
+@import "./modules/position.module";
+@import "./modules/text-overflow.module";
+@import "./modules/transform.module";
+@import "./modules/white-space.module";
+@import "./modules/z-index.module";

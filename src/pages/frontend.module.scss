@@ -1,0 +1,15 @@
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 3em;
+  background-color: #282c35;
+  @media (max-width: 450px) {
+    padding: 1em 0;
+  }
+}
