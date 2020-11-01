@@ -3,9 +3,11 @@ import Layout from "../layout"
 import style from "./frontend.module.scss"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/post"
+import SEO from "../components/seo"
 
 const Frontend = () => (
   <Layout>
+    <SEO title="Blog" description="List of blog post" />
     <div className={style.container}>
       <StaticQuery
         query={indexQuery}

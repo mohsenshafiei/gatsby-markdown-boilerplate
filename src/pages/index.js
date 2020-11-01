@@ -4,9 +4,14 @@ import Layout from "../layout"
 import { Maze } from "../components/maze"
 import profile from "../static/images/profile.png"
 import cv from "../static/cv/cv.pdf"
+import SEO from "../components/seo"
 
 const App = () => (
   <Layout>
+    <SEO
+      title="Mohsen Shafiei"
+      description="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Singaoire"
+    />
     <div className={style.container}>
       <Maze />
       <div className={style.wrapper}>
