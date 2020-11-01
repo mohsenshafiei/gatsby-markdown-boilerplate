@@ -2,8 +2,9 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: "gatsby-markdown-boilerplate",
-    description: "Gatsby Markdown Filesystem Boilerplate",
+    title: "Official Website",
+    description:
+      "I am a Frontend Engineer. I am From Iran and I Live In Singapore",
     author: "@mohsenshafiei",
   },
   plugins: [
@@ -85,13 +86,13 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Mohsen Shafiei",
-        short_name: "mohsenshafiei.com",
+        short_name: "Mohsen Shafiei",
         description:
-          "I'm Mohsen Shafiei. I am a frontend engineer and I live in Singapore.",
+          "I'm Mohsen Shafiei and I am a Frontend Engineer. I am From Iran and I live in Singapore.",
         lang: "en",
         start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
+        background_color: "#282c35",
+        theme_color: "#282c35",
         display: "standalone",
         icon: "src/static/fav/fav.png",
         // icons: [

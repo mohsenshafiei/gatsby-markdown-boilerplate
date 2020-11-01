@@ -10,7 +10,7 @@ const App = () => (
   <Layout>
     <SEO
       title="Mohsen Shafiei"
-      description="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Singaoire"
+      description="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Singapore"
     />
     <div className={style.container}>
       <Maze />
