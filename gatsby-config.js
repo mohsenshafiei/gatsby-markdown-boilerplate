@@ -74,12 +74,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Mohsen Shafiei`,
+        short_name: `mohsenshafiei.com`,
+        description:
+          "I'm Mohsen Shafiei. I am a frontend engineer and I live in Singapore.",
+        lang: "en",
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
+        icon: "src/static/fav/fav.png",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        appendScript: require.resolve(`./src/services/main.js`),
       },
     },
   ],

@@ -17,11 +17,17 @@ const App = () => (
         <h1 className={style.title}>MOHSEN SHAFIEI</h1>
         <h1 className={style.role}>Frontend Engineer</h1>
         <div className={style.wlink}>
-          <a className={style.link} href={cv} target="_blank">
+          <a
+            className={style.link}
+            href={cv}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             CV
           </a>
           <a
             className={style.link}
+            rel="noopener noreferrer"
             href="https://github.com/mohsenshafiei"
             target="blank"
           >
@@ -29,6 +35,7 @@ const App = () => (
           </a>
           <a
             className={style.link}
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/in/mohsen-shafiei-tafreshi-7250847b/"
             target="blank"
           >

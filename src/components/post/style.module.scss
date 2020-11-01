@@ -44,7 +44,7 @@
   font-size: 0.8em;
   color: white;
   text-align: left;
-  font-family: Lora;
+  font-family: Roboto;
   font-weight: 800;
 }
 
@@ -52,7 +52,7 @@
   color: white;
   font-size: 1.2em;
   line-height: 1.5em;
-  font-family: Lora;
+  font-family: Roboto;
   @media (max-width: 450px) {
     font-size: 0.8em;
   }
@@ -66,11 +66,12 @@
   font-family: Cocogoose;
 }
 .date {
-  border: 1px solid white;
+  // border: 1px solid white;
   padding: 0.2em 1em;
   font-size: 0.8em;
-  border-radius: 25px;
+  // border-radius: 25px;
   display: block;
+  font-family: Roboto;
   @media (max-width: 450px) {
     max-width: 175px;
     margin-top: 0.3em;

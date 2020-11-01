@@ -19,12 +19,9 @@
 }
 
 @font-face {
-  font-family: Lora;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url("Lora-Regular.woff2") format("woff2"),
-    /* FF39+,Chrome36+, Opera24+*/ url("Lora-Regular.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("Lora-Regular.ttf")
-      format("truetype");
+  src: url("Roboto-Regular.ttf") format("truetype");
 }

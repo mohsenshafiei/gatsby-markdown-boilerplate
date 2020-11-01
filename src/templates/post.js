@@ -14,7 +14,7 @@ const Post = ({ data, pageContext, location }) => {
         <span className={style.by}>By</span>{" "}
         <span className={style.info}>{post.author}</span>
         <span className={style.date}>Published On {post.date}</span>
-        <p className={style.content}>{parse(content)}</p>
+        <div className={style.content}>{parse(content)}</div>
       </div>
     </Layout>
   )

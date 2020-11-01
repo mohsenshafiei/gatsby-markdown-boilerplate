@@ -63,8 +63,8 @@
   margin-left: 2em;
   margin-top: 0.3em;
   display: block;
-  font-family: Lora;
-  border-bottom: 2px solid pink;
+  font-family: Roboto;
+  // border-bottom: 2px solid pink;
   padding-bottom: 4px;
   text-align: center;
   font-size: 0.6em;
@@ -86,11 +86,10 @@
 }
 
 .content {
-  font-family: sans-serif;
+  font-family: Roboto;
   line-height: 1.5em;
   margin-top: 2em;
   font-size: 1.1em;
-  font-family: Lora;
   color: white;
   text-align: justify;
   @media (max-width: 1100px) {
@@ -106,20 +105,39 @@
   h4,
   h5 {
     font-family: Cocogoose;
+    margin-top: 1em;
   }
   p {
     margin-top: 1em;
+    font-family: Roboto;
   }
   pre {
-    background-color: #282f3b;
-    padding: 2em;
+    counter-reset: line-numbering;
+    background-color: #383e49;
+    padding: 1em 2em;
     border-radius: 25px;
   }
   code {
-    color: pink;
+    color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 0.8em;
     font-weight: 600;
     line-height: 0.5em;
+  }
+  a {
+    font-family: Roboto;
+    color: pink;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    display: block;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
   }
 }
