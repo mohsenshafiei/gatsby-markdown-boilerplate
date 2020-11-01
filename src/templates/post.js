@@ -5,6 +5,20 @@ import style from "./style.module.scss"
 import parse from "html-react-parser"
 import SEO from "../components/seo"
 
+const titleCase = str => {
+  var splitStr = str.toLowerCase().split(" ")
+  for (var i = 0; i < splitStr.length; i++) {
+    // You do not need to check if i is larger than splitStr length, as your for does that for you
+    // Assign it back to the array
+    if (splitStr[i].length > 3) {
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1)
+    }
+  }
+  // Directly return the joined string
+  return splitStr.join(" ")
+}
+
 const Post = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const content = data.markdownRemark.excerpt
@@ -12,7 +26,7 @@ const Post = ({ data, pageContext, location }) => {
   return (
     <Layout>
       <SEO
-        title={post.title}
+        title={titleCase(post.title)}
         description={`This blog post is written by ${post.author} on ${post.date} and it is about ${post.title}`}
       />
       <div className={style.container}>

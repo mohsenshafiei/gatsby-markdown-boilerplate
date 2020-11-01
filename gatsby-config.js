@@ -2,7 +2,7 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: "Official Website",
+    title: "Mohsen Shafiei Official Website",
     description:
       "I am a Frontend Engineer. I am From Iran and I Live In Singapore",
     author: "@mohsenshafiei",
@@ -36,6 +36,12 @@ module.exports = {
           "images" /* Matches Gatsby default rules for images */,
           "media" /* Matches Gatsby default rules for media (video/audio) */,
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-168928370-1",
       },
     },
     {

@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const App = () => (
   <Layout>
     <SEO
-      title="Mohsen Shafiei"
+      title="Home"
       description="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Singapore"
     />
     <div className={style.container}>

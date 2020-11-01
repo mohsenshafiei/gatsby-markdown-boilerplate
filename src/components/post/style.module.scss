@@ -72,14 +72,13 @@
   // border-radius: 25px;
   display: block;
   font-family: Roboto;
-  @media (max-width: 450px) {
-    max-width: 175px;
+  @media (max-width: 500px) {
     margin-top: 0.3em;
     border: none;
     margin-left: 1.2em;
     // float: right;
   }
-  @media (min-width: 450px) {
+  @media (min-width: 500px) {
     float: right;
   }
 }
