@@ -11,7 +11,10 @@ const Post = ({ data, pageContext, location }) => {
   const parsedContent = parse(content)
   return (
     <Layout>
-      <SEO title={post.title} description={parsedContent} />
+      <SEO
+        title={post.title}
+        description={`This blog post is written by ${post.author} on ${post.date} and it is about ${post.title}`}
+      />
       <div className={style.container}>
         <h2 className={style.title}>{post.title}</h2>
         <span className={style.by}>By</span>{" "}
