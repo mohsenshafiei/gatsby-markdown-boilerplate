@@ -6,9 +6,11 @@ module.exports = {
     description:
       "I am a Frontend Engineer. I am From Iran and I Live In Singapore",
     author: "@mohsenshafiei",
+    siteUrl: `https://www.mohsenshafiei.com`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-transformer-remark",
@@ -101,6 +103,10 @@ module.exports = {
         theme_color: "#282c35",
         display: "standalone",
         icon: "src/static/fav/fav.png",
+        icon_options: {
+          purpose: `maskable`,
+        },
+        // legacy: false,
         // icons: [
         //   {
         //     src: "src/static/fav/apple-icon-114x114.png",

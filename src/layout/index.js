@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={style.container}>
+      <div className={style.container} ontouchstart="">
         <main>{children}</main>
       </div>
     </>

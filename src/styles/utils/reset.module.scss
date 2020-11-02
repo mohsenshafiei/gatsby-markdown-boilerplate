@@ -2,10 +2,11 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1;
+  background-color: #282c35;
 }
 
 ::selection {
-  background-color: $color--primary;
+  background-color: #282c35;
   color: $color--white;
 }
 
@@ -26,6 +27,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   min-width: 320px !important;
+  background-color: #282c35;
 }
 
 body,
