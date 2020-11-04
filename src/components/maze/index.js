@@ -163,14 +163,17 @@ export const Maze = () => {
 
   const gameLoop = () => counter < path.length && setCounter(counter + 1)
 
-  const startGame = () => {
+  const startGame = isMounted => {
     const start = [getRandomArbitrary(0, X - 1), getRandomArbitrary(0, Y - 1)]
-    setPathing(dfs(start[0], start[1]))
-    setSpeed(SPEED)
+    if (isMounted) {
+      setPathing(dfs(start[0], start[1]))
+      setSpeed(SPEED)
+    }
   }
 
   useEffect(() => {
-    setTimeout(() => startGame(), 3000)
+    let isMounted = true
+    setTimeout(() => startGame(isMounted), 3000)
   }, [])
 
   return (

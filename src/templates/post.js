@@ -19,10 +19,21 @@ const titleCase = str => {
   return splitStr.join(" ")
 }
 
+const visit = pathname => {
+  if (typeof window === `undefined`) return
+  if (window && window.localStorage) {
+    const visited = window.localStorage.getItem("visitedPages")
+    const visitedArray = JSON.parse(visited) || {}
+    const newVisited = JSON.stringify({ ...visitedArray, [pathname]: true })
+    window.localStorage.setItem("visitedPages", newVisited)
+  }
+}
+
 const Post = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const content = data.markdownRemark.excerpt
   const parsedContent = parse(content)
+  visit(location.pathname)
   return (
     <Layout>
       <SEO
@@ -35,6 +46,15 @@ const Post = ({ data, pageContext, location }) => {
         <span className={style.info}>{post.author}</span>
         <span className={style.date}>Published On {post.date}</span>
         <div className={style.content}>{parsedContent}</div>
+        <div className={style.tagWrapper}>
+          {post.tags.map((tag, index) => {
+            return (
+              <span className={style.tag} key={index}>
+                {tag}
+              </span>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )
@@ -49,6 +69,7 @@ export const postQuery = graphql`
         title
         author
         date
+        tags
       }
       excerpt(pruneLength: 20000, format: HTML, truncate: true)
     }

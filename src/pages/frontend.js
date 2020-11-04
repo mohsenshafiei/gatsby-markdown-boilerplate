@@ -20,6 +20,7 @@ const Frontend = () => (
                     title={node.frontmatter.title}
                     author={node.frontmatter.author}
                     date={node.frontmatter.date}
+                    tags={node.frontmatter.tags}
                     slug={node.fields.slug}
                     body={node.excerpt}
                     key={node.id}
@@ -47,6 +48,7 @@ const indexQuery = graphql`
             title
             date
             author
+            tags
           }
           fields {
             slug

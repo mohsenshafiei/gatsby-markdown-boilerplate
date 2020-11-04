@@ -32,7 +32,18 @@ const random = pallete => {
   }
 }
 
-const Post = ({ title, author, slug, date, body }) => {
+const hasVisited = slug => {
+  if (typeof window === `undefined`) return
+  if (window && window.localStorage) {
+    const visit = window.localStorage.getItem("visitedPages")
+    if (!visit) return false
+    const parsedVisitedPages = JSON.parse(visit)
+    if (parsedVisitedPages && parsedVisitedPages[`/${slug}`]) return true
+  }
+}
+
+const Post = ({ title, author, slug, date, body, tags }) => {
+  const isVisited = hasVisited(slug)
   return (
     <div
       className={style.container}
@@ -46,9 +57,21 @@ const Post = ({ title, author, slug, date, body }) => {
         </Link>
       </h2>
       <p className={style.info}>
-        <span className={style.by}>By</span><span className={style.author}>{author}</span><span className={style.date}>{date}</span>
+        <span className={style.by}>By</span>
+        <span className={style.author}>{author}</span>
+        <span className={style.date}>{date}</span>
       </p>
       <p className={style.content}>{body}</p>
+      <div className={style.tagWrapper}>
+        {tags.map((tag, index) => {
+          return (
+            <span className={style.tag} key={index}>
+              {tag}
+            </span>
+          )
+        })}
+        {!isVisited && <span className={style.tagUnvisited}>Unread</span>}
+      </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@
 title: "Story of my blog"
 date: "Sunday October 31 2020"
 author: "Mohsen Shafiei"
+tags: ["Blog", "Story", "General"]
 ---
 
 I created this website two years ago, and since then, I have always wanted to write my thoughts and publish them somewhere.

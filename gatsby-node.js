@@ -1,13 +1,13 @@
-const { slugify } = require('./src/util/utilityFunctions')
-const path = require('path')
+const { slugify } = require("./src/util/utilityFunctions")
+const path = require("path")
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === "MarkdownRemark") {
     const slugFromTitle = slugify(node.frontmatter.title)
     createNodeField({
       node,
-      name: 'slug',
+      name: "slug",
       value: slugFromTitle,
     })
   }
@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const postTemplate = path.resolve(__dirname, 'src/templates/post.js')
+  const postTemplate = path.resolve(__dirname, "src/templates/post.js")
 
   return graphql(`
     {

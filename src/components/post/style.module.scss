@@ -82,3 +82,41 @@
     float: right;
   }
 }
+
+.tagWrapper {
+  margin-top: 1em;
+  float: right;
+}
+.tag {
+  border: 1px solid pink;
+  background-color: transparent;
+  color: black;
+  color: pink;
+  font-size: 0.6em;
+  margin-right: 8px;
+  padding: 3px 4px;
+  min-width: 48px;
+  display: inline-block;
+  text-align: center;
+  font-family: Roboto;
+  &:hover {
+    background-color: pink;
+    color: black;
+  }
+}
+.tagUnvisited {
+  border: 1px solid pink;
+  background-color: pink;
+  color: black;
+  font-size: 0.6em;
+  margin-right: 8px;
+  padding: 3px 4px;
+  min-width: 48px;
+  display: inline-block;
+  text-align: center;
+  font-family: Roboto;
+  &:hover {
+    background-color: pink;
+    color: black;
+  }
+}
