@@ -1,22 +1,22 @@
 import React from "react"
 import Layout from "../layout"
-import style from "./frontend.module.scss"
+import style from "./note.module.scss"
 import { graphql, StaticQuery } from "gatsby"
-import Post from "../components/post"
+import Note from "../components/note"
 import SEO from "../components/seo"
 
-const Frontend = () => (
+const NotePage = () => (
   <Layout>
-    <SEO title="Blog" description="List of blog post" />
+    <SEO title="Notes" description="List of notes" />
     <div className={style.container}>
       <StaticQuery
-        query={indexQuery}
+        query={notesQuery}
         render={data => {
           return (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => {
                 return (
-                  <Post
+                  <Note
                     title={node.frontmatter.title}
                     author={node.frontmatter.author}
                     date={node.frontmatter.date}
@@ -35,11 +35,11 @@ const Frontend = () => (
   </Layout>
 )
 
-const indexQuery = graphql`
-  query indexQuery {
+const notesQuery = graphql`
+  query notesQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/posts/.*.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/notes/.*.md$/" } }
     ) {
       edges {
         node {
@@ -60,4 +60,4 @@ const indexQuery = graphql`
   }
 `
 
-export default Frontend
+export default NotePage

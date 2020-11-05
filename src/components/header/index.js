@@ -9,8 +9,17 @@ const Header = ({ siteTitle }) => (
       <Link className={style.link} to="/">
         HOME
       </Link>
-      <Link className={style.link} to="/frontend">
+      <Link className={style.link} to="/blog/">
         BLOG
+      </Link>
+      <Link className={style.link} to="/note/">
+        NOTES
+      </Link>
+      <Link className={style.link} to="/story/">
+        Stories
+      </Link>
+      <Link className={style.link} to="/book/">
+        Books
       </Link>
     </div>
   </div>
