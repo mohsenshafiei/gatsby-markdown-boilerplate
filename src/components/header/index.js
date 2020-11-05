@@ -16,10 +16,10 @@ const Header = ({ siteTitle }) => (
         NOTES
       </Link>
       <Link className={style.link} to="/story/">
-        Stories
+        STORIES
       </Link>
       <Link className={style.link} to="/book/">
-        Books
+        BOOKS
       </Link>
     </div>
   </div>
