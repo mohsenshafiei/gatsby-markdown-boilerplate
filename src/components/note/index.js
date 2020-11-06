@@ -56,11 +56,11 @@ const Note = ({ title, author, slug, date, body, tags }) => {
           {title}
         </Link>
       </h2>
-      <p className={style.info}>
+      {/* <p className={style.info}>
         <span className={style.by}>By</span>
         <span className={style.author}>{author}</span>
         <span className={style.date}>{date}</span>
-      </p>
+      </p> */}
       <p className={style.content}>{body}</p>
       <div className={style.tagWrapper}>
         {tags.map((tag, index) => {

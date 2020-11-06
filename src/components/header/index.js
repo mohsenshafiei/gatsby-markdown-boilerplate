@@ -15,12 +15,12 @@ const Header = ({ siteTitle }) => (
       <Link className={style.link} to="/note/">
         NOTES
       </Link>
-      <Link className={style.link} to="/story/">
+      {/* <Link className={style.link} to="/story/">
         STORIES
       </Link>
       <Link className={style.link} to="/book/">
         BOOKS
-      </Link>
+      </Link> */}
     </div>
   </div>
 )

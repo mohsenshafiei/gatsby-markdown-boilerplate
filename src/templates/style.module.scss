@@ -140,6 +140,28 @@
     border: none;
     border-radius: 5px;
   }
+  em {
+    color: #81e6d9;
+    font-weight: 900;
+    font-family: Roboto;
+  }
+  ul {
+    font-family: Roboto;
+    li {
+      margin-top: 1em;
+      padding-left: 1em;
+      font-family: Roboto;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 2px;
+        margin-right: 8px;
+        margin-bottom: 6px;
+        background-color: #81e6d9;
+      }
+    }
+  }
 }
 
 .tagWrapper {
